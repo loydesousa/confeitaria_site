@@ -1,63 +1,46 @@
-/* Configurações gerais */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-/* Alinhamento do body */
-body{
-    display: flex; /* Flexibilização do body */
-    justify-content: center; /* Alinhamento horizontal */
-    align-items: center;  /* Alinhamento vertial */
-}
-/* Estilização do container principal */
+/*Usem a técnica de Mobile First*/
+
+
+
+/* Estilização do container principal dos cards*/
 .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-wrap: wrap;
-    gap: 50px 50px;
-    padding: 100px 50px; 
-}
-/* Estilização dos cards */
-#cardapio_title{
-    font: oblique bold 2.5rem/1.2 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    margin-bottom: 30px;
-    text-decoration: solid;
-    color: #8B0000;
+    gap: 40px 40px;
+    padding: 20px 20px; 
 }
 /* Estilização dos cards */
 .container .card{
-    position: relative; /* significa que o posicionamento vai ser em relação a sua posição no layout original.*/
     display: flex;
-    justify-content: space-around;
+    position: relative; /* significa que o posicionamento vai ser em relação a sua posição no layout original.*/
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     width: 350px;
     height: 300px;
-    border-radius: 20px;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.2);
-    background: #BC8F88;
-    transition: .2s;
+    border-radius: 40px;
+    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
+    background: #c49189;
+    transition: .4s;
 }
 /* Hover dos Cards*/
 .container .card:hover{
-    height: 400px;
+    transition: .4s;
+    height: 450px;
 }
-/* Estilização das caixas que contém as imagens. */
+/* Estilização das caixasImage*/
 .container .card .caixaImage{
-    position: absolute; /* significa que o posicionamento do card vai ter o card como base.*/
+    position: absolute; /* significa que o posicionamento do caixaImagem vai ter o card como base.*/
     top: 20px;
     width: 300px;
     height: 200px;
     border-radius: 25px;
     overflow: hidden;
-    transition: .3s;
+    transition: .4s;
 }
-/* Estilização das imagens dentro dos cards */
+/* Estilização das imagens */
 .container .card .caixaImage img{
     position: absolute;
     top: 0;
@@ -70,48 +53,43 @@ body{
 .container .card .conteudo{
     position: absolute;
     top: 250px;
-    width: 100%;
+    width: 300px;
     height: 44px;
     padding: 0 30px;
     overflow: hidden;
     text-align: center;
-    transition: .5s;
+    transition: .4s;
 }
 /* Hover do Conteúdo */
 .container .card:hover .conteudo{
-    top: 150px; /* Quando tiver um houver o conteúdo vai subir 150px em relação ao card*/
+    top: 150px; /* Quando tiver um houver o conteúdo vai subir 150px */
     height: 350px; /* Quando tiver um houver o conteúdo vai aumentar sua altura */
 }
 /* Hover da Caixa da Img */
 .container .card:hover .caixaImage{
     top: -50px; /* Quando tiver um houver a caixa da img vai subir em relação ao card*/
-    scale: .60; /* A escala(tamanho) dessa imagem vai dimunuída em 60%*/
+    scale: .70; /* A escala(tamanho) dessa imagem vai dimunuída em 70%*/
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.20);
 }
 /* Estilização do conteúdo */
-.container .card .conteudo h2{
-    font-size: 1.5rem;
-    font-weight: 600;
-    line-height: 3rem;
-    color: #8B0000;
-}
-/* Estilização do conteúdo */
 .container .card .conteudo p{
-    color: #333;
+    color: #000000;
+    font-style: italic;
 }
 /* Estilização do link */
 .container .card .conteudo a{
     display: inline-block; 
-    margin-top: 15px;
+    margin-top: 10px;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 10px;
-    font-weight: 500;
-    background: #6f0303;
+    font-weight: bold;
+    background: #962c2c;
     color: #ffffff;
 }
 /* Hover do Link */
 .container .card .conteudo a:hover{
-    font-weight: bolder;
+    top: -50px;
+    font-style: italic;
     transition: .3s;
 }
