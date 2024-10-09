@@ -1,9 +1,7 @@
 /*Usem a técnica de Mobile First*/
-
-
-
-/* Estilização do container principal dos cards*/
+/* CONTAINER CARDS */
 .container{
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,84 +10,162 @@
     gap: 40px 40px;
     padding: 20px 20px; 
 }
-/* Estilização dos cards */
+/* CARDS */
 .container .card{
     display: flex;
-    position: relative; /* significa que o posicionamento vai ser em relação a sua posição no layout original.*/
+    position: relative; 
     justify-content: center;
     align-items: center;
-    width: 350px;
-    height: 300px;
+    width: 300px;
+    height: 350px;
     border-radius: 40px;
     box-shadow: 0 40px 80px rgba(0, 0, 0, 0.2);
-    background: #c49189;
+    background: #E8CBC5;
     transition: .4s;
 }
-/* Hover dos Cards*/
-.container .card:hover{
-    transition: .4s;
-    height: 450px;
-}
-/* Estilização das caixasImage*/
+/* CAIXA IMAGEM */
 .container .card .caixaImage{
-    position: absolute; /* significa que o posicionamento do caixaImagem vai ter o card como base.*/
-    top: 20px;
-    width: 300px;
+    position: absolute;
+    top: 10px;
+    width: 200px;
     height: 200px;
     border-radius: 25px;
-    overflow: hidden;
     transition: .4s;
 }
-/* Estilização das imagens */
+/* IMAGENS */
 .container .card .caixaImage img{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 40px;
     object-fit: cover;
 }
-/* Estilização do conteúdo */
-.container .card .conteudo{
+/* TÍTULO CARDS */
+.container .card .conteudo h2{
     position: absolute;
-    top: 250px;
-    width: 300px;
-    height: 44px;
-    padding: 0 30px;
-    overflow: hidden;
+    top: 220px;
+    width: 100px;
+    height: 30px;
+    left: 100px;
+    right: 100px;
+    padding: 0 10px;
     text-align: center;
     transition: .4s;
 }
-/* Hover do Conteúdo */
-.container .card:hover .conteudo{
-    top: 150px; /* Quando tiver um houver o conteúdo vai subir 150px */
-    height: 350px; /* Quando tiver um houver o conteúdo vai aumentar sua altura */
-}
-/* Hover da Caixa da Img */
-.container .card:hover .caixaImage{
-    top: -50px; /* Quando tiver um houver a caixa da img vai subir em relação ao card*/
-    scale: .70; /* A escala(tamanho) dessa imagem vai dimunuída em 70%*/
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.20);
-}
-/* Estilização do conteúdo */
+/* CONTEÚDO CARDS */
 .container .card .conteudo p{
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    right: 50px;
+    text-align: center;
     color: #000000;
     font-style: italic;
 }
-/* Estilização do link */
+/* LINKS CARDS */
 .container .card .conteudo a{
-    display: inline-block; 
+    position: absolute;
+    top: 280px;
+    left: 70px;
+    right: 70px;
     margin-top: 10px;
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 10px;
     font-weight: bold;
-    background: #962c2c;
     color: #ffffff;
+    background: #962c2c;
+    border-radius: 20px;
 }
-/* Hover do Link */
-.container .card .conteudo a:hover{
-    top: -50px;
-    font-style: italic;
-    transition: .3s;
+/* Config. para Tablet */
+@media (min-width: 720px){
+    #title{
+        position: absolute;
+        top: 10px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bolder;
+        font-style: italic;
+        margin-bottom: 20px;
+        line-height: 1.8rem; 
+        transition: .4s; 
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 40px 40px;
+        padding: 20px 20px; 
+    }
+    .container .card .caixaImage{
+        width: 250px;
+        transition: .4s;
+    }
+    .container .card .conteudo h2{
+        position: absolute;
+        top: 220px;
+        width: 120px;
+        height: 30px;
+        left: 90px;
+        right: 90px;
+        padding: 0 10px;
+        text-align: center;
+        font-style: italic;
+        font-size: 24px;
+        color: #7a0101;
+        transition: .4s;
+    }
+    .container .card .conteudo p{
+        position: absolute;
+        height: 30px;
+        top: 250px;
+        left: 50px;
+        right: 50px;
+        text-align: center;
+        font-size: 20px;
+        font-style: italic;
+        color: #000000;
+    }
+    .container .card .conteudo a{
+        position: absolute;
+        top: 280px;
+        left: 70px;
+        right: 70px;
+        margin-top: 10px;
+        padding: 10px 20px;
+        color: #ffffff;
+        background: #962c2c;
+        font-weight: bold;
+        font-size: 16px;
+        text-decoration: none;
+        border-radius: 20px;
+    }
+}
+/* Config. para Desktop */
+@media (min-width: 1024px){
+    #title{
+        position: absolute;
+        top: 10px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bolder;
+        font-style: italic;
+        margin-bottom: 20px;
+        line-height: 1.8rem; 
+        transition: .4s; 
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 50px 50px;
+        padding: 20px 20px; 
+    }
 }
