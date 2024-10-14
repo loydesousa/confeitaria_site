@@ -1,2 +1,2 @@
-# Confeitaria
-### Nesse site estaremos usando a técnica de Mobile First, pensando primeiro no layout para celulares e a partir disso para tablets e desktops
+# Sweet magic confectionery
+### On this site we will be using the Mobile First technique, thinking first about the layout for cell phones and then for tablets and desktops
