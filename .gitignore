@@ -8,3 +8,4 @@ AppData/
 Desktop.ini
 *.bak
 *.lock
+echo "confeitaria_site/" >> .gitignore
