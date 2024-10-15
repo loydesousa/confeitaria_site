@@ -1,0 +1,24 @@
+/* Configurações globais */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+body{
+    background: #EFE5E5;
+    display: flex; /* Flexibilização do body */
+    justify-content: center; /* Alinhamento horizontal */
+    align-items: center;  /* Alinhamento vertial */
+}
+#title{
+    position: absolute;
+    top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 16px;
+    line-height: 2rem;
+    transition: .4s;
+    color: #7a0101;
+}
