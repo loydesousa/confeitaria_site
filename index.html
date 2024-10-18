@@ -1,68 +1,307 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Confeitaria</title>
+    <title>Doces Magia</title>
+
+    <!-- Font Awesome para ícones -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #FFFAF0;
+        }
+
+        header {
+            background: linear-gradient(45deg, #FF69B4, #FFA07A);
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #FFF;
+            text-decoration: none;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo:before {
+            content: "🍩";
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #FFF;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #FFD700;
+            transform: scale(1.1);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            text-decoration: none;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a.twitter {
+            color: #1DA1F2;
+        }
+
+        .social-icons a.instagram {
+            color: #C13584;
+        }
+
+        .social-icons a.whatsapp {
+            color: #25D366;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.8;
+        }
+
+        .cart-button {
+            background-color: #FFD700;
+            border: none;
+            color: #FFF;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        .cart-button:hover {
+            background-color: #FFA500;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+            color: #5A5A5A;
+        }
+
+        #home {
+            background-color: #FFB6C1;
+            height: 100vh;
+        }
+
+        #sobre {
+            background-color: #BAE1FF;
+            height: 100vh;
+        }
+
+        #produtos {
+            background-color: #FFFACD;
+            min-height: 100vh;
+        }
+
+        #contato {
+            background-color: #E6E6FA;
+            height: 100vh;
+        }
+
+        h1, h2 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #FFF;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .caixaImage img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .conteudo {
+            padding: 15px;
+        }
+
+        .conteudo h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .conteudo p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .conteudo a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #FF69B4;
+            color: #FFF;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .conteudo a:hover {
+            background-color: #FFA07A;
+        }
+
+        footer {
+            background-color: #FF69B4;
+            color: #FFF;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .cart-button {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <a href="#" class="logo">Doces Magia</a>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+        <button class="cart-button">
+            <i class="fas fa-shopping-cart"></i> Carrinho
+        </button>
+    </header>
 
-    <!--aqui vai o cabeçalho-->
-    
+    <section id="home">
+        <h1>Bem-vindo à Doces Magia!</h1>
+        <p>Explore nossas delícias e aproveite a doçura do momento.</p>
+    </section>
 
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <p>Somos apaixonados por criar momentos doces e especiais para você.</p>
+    </section>
 
-    
-    <!--cardápio e cards demontrativos-->
-    <h2 id="title"> As Estrelas da Casa👑 </h2>
-    <div class="container">
-        <div class="card">
-            <div class="caixaImage">
-                <img src="bolos.jpg" alt="bolos">
+    <section id="produtos">
+        <h2>Nossos Produtos</h2>
+        <div class="product-grid">
+            <div class="card">
+                <div class="caixaImage">
+                    <img src="bolos.jpg" alt="bolos">
+                </div>
+                <div class="conteudo">
+                    <h2>Brownies</h2>
+                    <p>Clássicos e macios.</p>
+                    <a href="#">Saiba Mais!</a>
+                </div>
             </div>
-            <div class="conteudo">
-                 <h2>Brownies</h2>  
-                 <p>Clássicos e macios.</p>     
-                 <a href="#">Saiba Mais!</a>         
+
+            <div class="card">
+                <div class="caixaImage">
+                    <img src="donuts.jpg" alt="donuts">
+                </div>
+                <div class="conteudo">
+                    <h2>Donuts</h2>
+                    <p>Macios e saborosos.</p>
+                    <a href="#">Saiba Mais!</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="caixaImage">
+                    <img src="tortas (1).jpg" alt="tortas">
+                </div>
+                <div class="conteudo">
+                    <h2>Tortas</h2>
+                    <p>Doces e cremosas.</p>
+                    <a href="#">Saiba Mais!</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="caixaImage">
+                    <img src="mousses.jpg" alt="mousses">
+                </div>
+                <div class="conteudo">
+                    <h2>Mousses</h2>
+                    <p>Leve e sofisticada.</p>
+                    <a href="#">Saiba Mais!</a>
+                </div>
             </div>
         </div>
-        <!--b-->
-        <div class="card">
-            <div class="caixaImage">
-                <img src="donuts.jpg" alt="donuts">
-            </div>
-            <div class="conteudo">
-                <h2>Donuts</h2>
-                <p>Macios e saborosos.</p>
-                <a href="#">Saiba Mais!</a> 
-            </div>
-        </div>
-        <!--b-->
-        <div class="card">
-            <div class="caixaImage">
-                <img src="tortas (1).jpg" alt="tortas">
-            </div>
-            <div class="conteudo">
-                <h2>Tortas</h2>
-                <p>Doces e cremosas.</p>
-                <a href="#">Saiba Mais!</a>
-            </div>
-        </div>
-         <!--b-->
-         <div class="card">
-            <div class="caixaImage">
-                <img src="mousses.jpg" alt="mousses">
-            </div>
-            <div class="conteudo">
-                <h2>Mousses</h2>
-                <p>Leve e sofisticada.</p>
-                <a href="#">Saiba Mais!</a>
-            </div>
-        </div>
-    </div>
+    </section>
 
-    <!--rodapé da pagina-->
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Fale conosco pelo WhatsApp ou visite nossas redes sociais!</p>
+        <div class="social-icons">
+            <a href="#" target="_blank" class="twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank" class="instagram"><i class="instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </section>
 
+    <footer>
+        <p>&copy; 2024 Doces Magia. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
+
