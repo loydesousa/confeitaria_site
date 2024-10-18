@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doces Magia</title>
-
+    <link rel="stylesheet" href="style.css">
     <!-- Font Awesome para ícones -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <style>
         body {
-            margin: 0;
             font-family: 'Arial', sans-serif;
             background-color: #FFFAF0;
         }
@@ -124,7 +123,7 @@
         }
 
         #produtos {
-            background-color: #FFFACD;
+            background-color: #f9d9ae;
             min-height: 100vh;
         }
 
@@ -179,6 +178,7 @@
 
         .conteudo p {
             font-size: 18px;
+            font-style: italic;
             color: #555;
         }
 
@@ -189,14 +189,14 @@
             background-color: #FF69B4;
             color: #FFF;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 10px;
             transition: background-color 0.3s;
         }
 
         .conteudo a:hover {
-            background-color: #FFA07A;
+            background-color: #f0a283;
         }
-
+ 
         footer {
             background-color: #FF69B4;
             color: #FFF;
@@ -211,6 +211,17 @@
             .cart-button {
                 display: none;
             }
+            .conteudo p{
+            font-size: 18px;
+        }
+        .conteudo h2{
+            font-size: 20px;
+        }
+        .product-title {
+            font-size: 24px;
+        }
+
+
         }
     </style>
 </head>
@@ -241,14 +252,14 @@
     </section>
 
     <section id="produtos">
-        <h2>Nossos Produtos</h2>
+        <h2 class="product-title" style="color: #5e0010;">As Estrelas da Casa👑</h2>
         <div class="product-grid">
             <div class="card">
                 <div class="caixaImage">
                     <img src="bolos.jpg" alt="bolos">
                 </div>
                 <div class="conteudo">
-                    <h2>Brownies</h2>
+                    <h2 style="color: #5e0010;">Brownies</h2>
                     <p>Clássicos e macios.</p>
                     <a href="#">Saiba Mais!</a>
                 </div>
@@ -259,7 +270,7 @@
                     <img src="donuts.jpg" alt="donuts">
                 </div>
                 <div class="conteudo">
-                    <h2>Donuts</h2>
+                    <h2 style="color: #5e0010;">Donuts</h2>
                     <p>Macios e saborosos.</p>
                     <a href="#">Saiba Mais!</a>
                 </div>
@@ -270,7 +281,7 @@
                     <img src="tortas (1).jpg" alt="tortas">
                 </div>
                 <div class="conteudo">
-                    <h2>Tortas</h2>
+                    <h2 style="color: #5e0010;">Tortas</h2>
                     <p>Doces e cremosas.</p>
                     <a href="#">Saiba Mais!</a>
                 </div>
@@ -281,7 +292,7 @@
                     <img src="mousses.jpg" alt="mousses">
                 </div>
                 <div class="conteudo">
-                    <h2>Mousses</h2>
+                    <h2 style="color: #5e0010;">Mousses</h2>
                     <p>Leve e sofisticada.</p>
                     <a href="#">Saiba Mais!</a>
                 </div>
