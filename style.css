@@ -7,3 +7,24 @@
 body{
     background: #EFE5E5;
 }
+#menu{
+    background: #FFB6C1;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 350px;
+    width: 500px;
+    height: 70%;
+    border-radius: 10px;
+}
+#menu img{
+    width: 100px;
+    height: 100px;
+    margin-left: 180px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+#menu p{
+    text-align: left;
+    margin-left: 5px;
+}
