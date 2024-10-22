@@ -1,14 +1,230 @@
-/* Configurações globais */
+/*
+** Configurações globais**
+*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+/*
+** Config. Body**
+*/
 body{
-    background: #EFE5E5;
+    font-family: 'Arial', sans-serif;
+    background: #e4d0ed;
 }
+/*
+** Config. Cabeçalho**
+*/
+header {
+    background: linear-gradient(45deg, #7208be, #1c1b26);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFF;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo:before {
+    content: "🍩";
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFF;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    color: #c2852d;
+    transform: scale(1.1);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a.twitter {
+    color: #1DA1F2;
+}
+
+.social-icons a.instagram {
+    color: #C13584;
+}
+
+.social-icons a.whatsapp {
+    color: #25D366;
+}
+
+.social-icons a:hover {
+    opacity: 0.8;
+}
+
+.cart-button {
+    background: radial-gradient(#6d0354, #7100d4);
+    border: none;
+    color: #FFF;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.cart-button:hover {
+    background: linear-gradient(90deg, #76022b, #6d0354);
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+    color: #5A5A5A;
+}
+
+#home {
+    height: 100vh;
+}
+
+#sobre {
+    height: 100vh;
+}
+
+#produtos {
+    height: 100vh;
+}
+
+#contato {
+    height: 100vh;
+}
+
+h1, h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #FFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.caixaImage img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.conteudo {
+    padding: 15px;
+}
+
+.conteudo h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.conteudo p {
+    font-size: 18px;
+    font-style: italic;
+    color: #555;
+}
+
+.conteudo a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background:  linear-gradient(45deg, #7208be, #1c1b26);
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.conteudo a:hover {
+    background:  linear-gradient(45deg, #e706cd, #870db3);
+}
+
+footer {
+    background: linear-gradient(45deg, #7208be, #1c1b26);;
+    color: #FFF;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+/*
+**Config. Mobile**
+*/
+@media (max-width: 600px) {
+    .cart-button {
+        display: none;
+    }
+    .conteudo p{
+    font-size: 18px;
+}
+    .conteudo h2{
+        font-size: 20px;
+    }
+    .product-title {
+        font-size: 24px;
+    }
+    }
+/*
+**Config. Menu**
+*/
 #menu{
-    background: #FFB6C1;
     justify-content: center;
     align-items: center;
     margin: 5px 350px;
