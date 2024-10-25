@@ -10,6 +10,10 @@
 ** Config. Body**
 */
 body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     font-family: 'Arial', sans-serif;
     background: #e4d0ed;
 }
@@ -198,11 +202,54 @@ p {
 footer {
     background: linear-gradient(45deg, #7208be, #1c1b26);;
     color: #FFF;
-    text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
+}
+footer > section {
+    padding-top: 30px;
+    padding-right: 40px;
+    padding-bottom: 0px;
+    padding-left: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+footer > section > article > nav > ul > a {
+    text-decoration: none;
+    color: #FFF;
+    padding-right: 40px;
+    font-size: 20px;
+}
+footer > section > p {
+    color: #FFF;
+}
+.cadastro {
+    color: white;
+    padding-right: 290px;
+    font-size: 20px;
+}
+.cadastro1 {
+    color: white;
+    text-align: right;
+    padding-right: 40px;
+}
+.cadastro1 input[type="submit"] {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #7208be;
+    color: #FFF;
+    cursor: pointer;
+}
+.cadastro1 label {
+    font-size: 18px;
+}
+.cadastro1 input[type="text"]{
+    font-size: 16px;
 }
 /*
 **Config. Mobile**
