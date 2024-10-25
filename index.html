@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doces Magia</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <!-- Font Awesome para ícones -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body>
     <header>
@@ -34,9 +36,10 @@
         <p>Somos apaixonados por criar momentos doces e especiais para você.</p>
     </section>
 
-    <section id="produtos">
-        <h2 class="product-title">As Estrelas da Casa👑</h2>
-        <div class="product-grid">
+    <section id="products"> <!--Seção de Produtos-->
+        <h2 class="product-title">As Estrelas da Casa</h2>
+        <div class="product-container">
+
             <div class="card">
                 <div class="caixaImage">
                     <img src="bolos.jpg" alt="bolos">
@@ -81,13 +84,14 @@
                 </div>
             </div>
         </div>
-    </section>
+        
+    </section> <!--Seção de Produtos-->
 
-    <section id="section-menu">
+    <section id="section-menu"> <!--Seção do Menu--->
 
+        <h2 class="product-title">Menu Doces Magia</h2>
         <div id="menu">
 
-        <h2>Menu Doces Magia</h2>
         <div class="item">
             <h2>Brownies</h2>
             <img src="brownie-menu.jpg" alt="">
@@ -97,6 +101,7 @@
             <p>100 unidades: R$ 210,00</p>
         </div>
         
+
         <div class="item">
             <h2>Donuts</h2>
             <img src="donuts-menu.jpg" alt="">
@@ -109,7 +114,7 @@
         <div class="item">
             <h2>Tortas</h2>
             <img src="torta-menu.jpg" alt="">
-            <p>Sabores: Moranjo, Limão, Banoffe e Maracujá</p>
+            <p>Sabores: Morango, Limão, Banoffe e Maracujá</p>
             <p>Fatia: R$ 4,00</p>
             <p>Torta Inteira: R$ 30,00</p>
         </div>
@@ -125,7 +130,7 @@
         
         </div>
 
-    </section>
+    </section> <!--Seção do Menu--->
 
     <section id="contato">
         <h2>Contato</h2>
@@ -136,6 +141,9 @@
             <a href="#" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
         </div>
     </section>
+
+    <!--Botão Retorno ao Topo-->
+    <div onclick="scrollToTop()" class="voltarAoTopo">^</div>
 
     <footer>
         <section>
@@ -169,7 +177,7 @@
                 </p>
                 
             </div>
-            
+
         </section>
     </footer>
 </body>
