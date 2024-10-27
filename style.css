@@ -12,16 +12,12 @@
 ** Config. Body**
 */
 body{
-<<<<<<< HEAD
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
     font-family: 'Arial', sans-serif;
     background: #e4d0ed;
-=======
-    font-family: 'Poppins', sans-serif;
->>>>>>> 996a4e6c78541577319197ad5dccde0e013e7374
 }
 /*
 ** Config. Cabeçalho**
@@ -302,7 +298,6 @@ footer {
     background: linear-gradient(45deg, #7208be, #1c1b26);
     color: #FFF;
     padding: 10px 0;
-<<<<<<< HEAD
     position: sticky;
     bottom: 0;
     width: 100%;
@@ -354,14 +349,6 @@ footer > section > p {
 /*
 **Config. Mobile**
 */
-=======
-    position: static;
-    bottom: 0;
-    width: 100%;
-}
-
-
->>>>>>> 996a4e6c78541577319197ad5dccde0e013e7374
 @media (max-width: 600px) {
     .cart-button {
         display: none;
