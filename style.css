@@ -297,54 +297,141 @@ p {
 footer {
     background: linear-gradient(45deg, #7208be, #1c1b26);
     color: #FFF;
-    padding: 10px 0;
+    padding: 2vh 0;
     position: sticky;
     bottom: 0;
     width: 100%;
 }
+
 footer > section {
-    padding-top: 30px;
-    padding-right: 40px;
-    padding-bottom: 0px;
-    padding-left: 60px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    
+    padding: 2vh 4vw;
+    width: 100%;
 }
+
+footer > section > article > nav > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 footer > section > article > nav > ul > a {
     text-decoration: none;
     color: #FFF;
-    padding-right: 40px;
-    font-size: 20px;
+    padding: 1vh 2vw;
+    font-size: 1.5vw;
 }
+
 footer > section > p {
     color: #FFF;
+    text-align: center;
+    font-size: 1.2vw;
+    margin-top: 2vh;
+    padding: 1vh 2vw;
 }
+
 .cadastro {
     color: white;
-    padding-right: 290px;
-    font-size: 20px;
+    font-size: 1.5vw;
+    margin-top: 2vh;
 }
+
 .cadastro1 {
     color: white;
-    text-align: right;
-    padding-right: 40px;
+    text-align: center;
+    margin-top: 2vh;
 }
+
 .cadastro1 input[type="submit"] {
-    padding: 5px 10px;
-    font-size: 16px;
+    padding: 1vh 2vw;
+    font-size: 1vw;
     border: none;
     border-radius: 5px;
     background: #7208be;
     color: #FFF;
     cursor: pointer;
 }
+
 .cadastro1 label {
-    font-size: 18px;
+    font-size: 1.2vw;
 }
-.cadastro1 input[type="text"]{
-    font-size: 16px;
+
+.cadastro1 input[type="text"] {
+    font-size: 1vw;
+    border-radius: 5px;
+    padding: 1vh 2vw;
+    border: none;
+    margin-bottom: 1vh;
+    border: none;
+}
+
+@media (min-width: 600px) {
+    footer > section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer > section > article > nav > ul {
+        flex-direction: row;
+    }
+
+    footer > section > article > nav > ul > a {
+        padding: 0 2vw;
+    }
+
+    .cadastro, .cadastro1 {
+        margin-top: 0;
+    }
+
+    .cadastro1 {
+        text-align: right;
+    }
+
+    footer > section > p {
+        margin-top: 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+    footer > section {
+        flex-direction: column;
+    }
+    footer > section > article > nav > ul > a {
+        font-size: 2vh;
+    }
+    .cadastro {
+        font-size: 2vh;
+    }
+
+    .cadastro1 {
+        text-align: center;
+    }
+    .cadastro1 label {
+        font-size: 2vh;
+    }
+    .cadastro1 input[type="text"] {
+        font-size: 2vw;
+    }
+    .cadastro1 input[type="submit"] {
+    
+    font-size: 1.5vh;
+    }
+    footer > section > p {
+        margin-top: 2vh;
+        order: 2;
+        font-size: 1.5vh;
+    }
+    .cadastro1 {
+        order: 1;
+    } 
 }
 /*
 **Config. Mobile**
