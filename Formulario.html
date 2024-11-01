@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #5cb85c;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #4cae4c;
+        }
+
+        #mensagem {
+            text-align: center;
+            margin-top: 15px;
+            color: green;
+        }
+
+        .checkbox {
+            margin: 10px 0;
+        }
+
+        .checkbox input {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cadastro</h1>
+        <form id="cadastroForm">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" required placeholder="(XX) XXXX-XXXX">
+
+            
+
+            <div class="checkbox">
+                <input type="checkbox" id="termos" required>
+                <label for="termos">Aceito os termos e condições</label>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+        <div id="mensagem"></div>
+    </div>
+
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function (event) {
+            event.preventDefault(); 
+
+            
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            
+           
+            document.getElementById('mensagem').textContent = `Cadastro realizado com sucesso `;
+
+           
+            document.getElementById('cadastroForm').reset();
+        });
+    </script>
+</body>
+
+</html>
