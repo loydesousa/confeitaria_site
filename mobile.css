@@ -1,0 +1,538 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*
+** Configurações globais**
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*
+** Config. Body**
+*/
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #e4d0ed;
+}
+/*
+** Config. Cabeçalho**
+*/
+header {
+    background: linear-gradient(45deg, #7208be, #1c1b26);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: static;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFF;
+    text-decoration: none;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo:before {
+    content: "🍩";
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFF;
+    transition: all 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e41776;
+    transform: scale(1.1);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a.twitter {
+    color: #1DA1F2;
+}
+
+.social-icons a.instagram {
+    color: #C13584;
+}
+
+.social-icons a.whatsapp {
+    color: #25D366;
+}
+
+.social-icons a:hover {
+    opacity: 0.8;
+}
+
+.cart-button {
+    background: radial-gradient(#6d0354, #7100d4);
+    border: none;
+    color: #FFF;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.cart-button:hover {
+    background: linear-gradient(90deg, #76022b, #6d0354);
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+    color: #5A5A5A;
+}
+
+#home {
+    height: 100vh;
+}
+
+#sobre {
+    height: 100vh;
+}
+#contato {
+    height: 100vh;
+}
+
+h1, h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* Estilo do Menu Mobile */
+.btn-abrir-menu i{
+    color: rgb(0, 204, 255); /* Cor do ícone do botão de abrir o menu */
+    font-size: 40px; /* Tamanho do ícone */
+}
+
+.btn-abrir-menu{
+    display: none; /* O botão só aparece em telas menores */
+}
+
+.menu-mobile{
+    background-color: rgba(255, 255, 255, 0.822); /* Cor de fundo do menu móvel */
+    height: 100vh; /* Altura do menu móvel */
+    position: fixed; /* Posiciona o menu de forma fixa na tela */
+    top: 0; /* Inicia no topo */
+    right: 0; /* Alinha à direita */
+    z-index: 99999; /* Prioridade sobre outros elementos */
+    width: 0%; /* Largura inicial do menu */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassar os limites */
+    transition: .5s; /* Transição suave ao abrir/fechar */
+}
+
+.menu-mobile.abrir-menu{
+    width: 70%; /* Largura do menu ao abrir */
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block; /* Mostra a sobreposição ao abrir o menu */
+}
+
+.menu-mobile .btn-fechar{
+    padding: 20px 5%; /* Espaçamento interno do botão de fechar */
+}
+
+.menu-mobile .btn-fechar i{
+    color: rgb(0, 204, 255); /* Cor do ícone de fechar */
+    font-size: 30px; /* Tamanho do ícone de fechar */
+}
+
+
+/* Menu mobile */
+.menu-mobile nav ul{
+    text-align: right; /* Alinha o texto dos itens do menu à direita */
+}
+
+.menu-mobile nav ul li a{
+    color: black; /* Cor dos links do menu */
+    font-size: 20px; /* Tamanho da fonte dos links */
+    font-weight: 300; /* Peso da fonte mais leve */
+    padding: 20px 8%; /* Espaçamento interno dos links */
+    display: block; /* Torna os links blocos para melhor controle de layout */
+}
+
+.menu-mobile nav ul li a:hover{
+    background-color: rgb(0, 204, 255); /* Cor de fundo ao passar o mouse nos links */
+    color: #000; /* Muda a cor do texto para preto ao passar o mouse */
+}
+
+.overlay-menu{
+    background-color:rgba(0, 147, 184, 0.616) ; /* Cor de fundo da sobreposição do menu */
+    width: 100%; /* Ocupa toda a largura da tela */
+    height: 100%; /* Ocupa toda a altura da tela */
+    position: fixed; /* Fixa a sobreposição no topo da tela */
+    top: 0; /* Posiciona no topo */
+    left: 0; /* Posiciona à esquerda */
+    z-index: 88888; /* Prioridade sobre outros elementos, mas abaixo do menu */
+    display: none; /* Inicialmente oculta a sobreposição */
+}
+
+
+/* Cards dos Produtos*/
+.product-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.product-title{
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    transition: 0.4s;
+}
+
+.card {
+    width: 280px;
+    height: 350px;
+    background: #aa92ed;
+    border-radius: 20px;
+    align-content: center;
+    box-shadow: 0 2px rgba(48, 0, 70, 0.553);
+    transition: 0.4s;
+}
+
+.card:hover{
+    transform: scale(1.05);
+}
+
+.caixaImage img {
+    margin-top: 5px;
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.conteudo h2 {
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.conteudo p {
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #353131;
+}
+
+.conteudo a {
+    background:  linear-gradient(45deg, #7208be, #1c1b26);
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #FFF;
+    transition: 0.3s;
+}
+
+.conteudo a:hover {
+    background:  linear-gradient(45deg, #e706cd, #870db3);
+}
+/*Config. Tablet*/
+@media(min-width: 720px){
+    /*Config. Tablet | Cards dos Produtos*/
+    .product-title{
+        margin-bottom: 15px;
+        font-size: 30px;
+    }
+
+    .caixaImage{
+        margin-top: 5px;
+        align-content: center;
+    }
+
+    .conteudo h2, .conteudo p{
+        font-size: 20px;
+    }
+
+    /**Config. Menu**/
+#menu{
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#menu p{
+    font-size: 20px;
+}
+    
+}
+
+/*Config. Tablet*/
+@media(min-width: 1024px){
+    /*Config. Tablet | Cards dos Produtos*/
+    .product-title{
+        font-size: 36px;
+    }
+
+    .conteudo h2{
+        font-size: 24px;
+    }
+
+}
+
+/**Config. Menu**/
+#menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.item{
+    width: 500px;
+    height: 420px;
+}
+
+.item h2 {
+    color: #000000;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.item p {
+    color: #000000;
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+    color: #353131;
+}
+
+#menu img{
+    width: 340px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+#menu p{
+    font-size: 18px;
+    text-align: center;
+    margin-left: 5px;
+}
+/*Config. Footer*/
+footer {
+    background: linear-gradient(45deg, #7208be, #1c1b26);
+    color: #FFF;
+    padding: 2vh 0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+footer > section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2vh 4vw;
+    width: 100%;
+}
+
+footer > section > article > nav > ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer > section > article > nav > ul > a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 1vh 2vw;
+    font-size: 1.5vw;
+}
+
+footer > section > p {
+    color: #FFF;
+    text-align: center;
+    font-size: 1.2vw;
+    margin-top: 2vh;
+    padding: 1vh 2vw;
+}
+
+.cadastro {
+    color: white;
+    font-size: 1.5vw;
+    margin-top: 2vh;
+}
+
+.cadastro1 {
+    color: white;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.cadastro1 input[type="submit"] {
+    padding: 1vh 2vw;
+    font-size: 1vw;
+    border: none;
+    border-radius: 5px;
+    background: #7208be;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.cadastro1 label {
+    font-size: 1.2vw;
+}
+
+.cadastro1 input[type="text"] {
+    font-size: 1vw;
+    border-radius: 5px;
+    padding: 1vh 2vw;
+    border: none;
+    margin-bottom: 1vh;
+    border: none;
+}
+
+@media (min-width: 600px) {
+    footer > section {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer > section > article > nav > ul {
+        flex-direction: row;
+    }
+
+    footer > section > article > nav > ul > a {
+        padding: 0 2vw;
+    }
+
+    .cadastro, .cadastro1 {
+        margin-top: 0;
+    }
+
+    .cadastro1 {
+        text-align: right;
+    }
+
+    footer > section > p {
+        margin-top: 0;
+    }
+}
+
+
+@media (max-width: 600px) {
+    footer > section {
+        flex-direction: column;
+    }
+    footer > section > article > nav > ul > a {
+        font-size: 2vh;
+    }
+    .cadastro {
+        font-size: 2vh;
+    }
+
+    .cadastro1 {
+        text-align: center;
+    }
+    .cadastro1 label {
+        font-size: 2vh;
+    }
+    .cadastro1 input[type="text"] {
+        font-size: 2vw;
+    }
+    .cadastro1 input[type="submit"] {
+    
+    font-size: 1.5vh;
+    }
+    footer > section > p {
+        margin-top: 2vh;
+        order: 2;
+        font-size: 1.5vh;
+    }
+    .cadastro1 {
+        order: 1;
+    } 
+}
+
+
+
+/*
+**Config. Mobile**
+*/
+@media (max-width: 1020px) {
+  .logo, .cart-button{
+    display:none;  
+  }
+  
+  
+    }
+
+/**Config. Botão Voltar Ao Topo**/    
+.voltarAoTopo{
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    padding: 10px 15px;
+    background: radial-gradient(#5f069e, #1f11b0);
+    color: #FFFFFF;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.voltarAoTopo:hover {
+    background: linear-gradient(90deg, #76022b, #6d0354);
+}
