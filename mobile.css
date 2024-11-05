@@ -146,74 +146,6 @@ p {
     font-size: 20px;
 }
 
-/* Estilo do Menu Mobile */
-.btn-abrir-menu i{
-    color: rgb(0, 204, 255); /* Cor do ícone do botão de abrir o menu */
-    font-size: 40px; /* Tamanho do ícone */
-}
-
-.btn-abrir-menu{
-    display: none; /* O botão só aparece em telas menores */
-}
-
-.menu-mobile{
-    background-color: rgba(255, 255, 255, 0.822); /* Cor de fundo do menu móvel */
-    height: 100vh; /* Altura do menu móvel */
-    position: fixed; /* Posiciona o menu de forma fixa na tela */
-    top: 0; /* Inicia no topo */
-    right: 0; /* Alinha à direita */
-    z-index: 99999; /* Prioridade sobre outros elementos */
-    width: 0%; /* Largura inicial do menu */
-    overflow: hidden; /* Esconde o conteúdo que ultrapassar os limites */
-    transition: .5s; /* Transição suave ao abrir/fechar */
-}
-
-.menu-mobile.abrir-menu{
-    width: 70%; /* Largura do menu ao abrir */
-}
-
-.menu-mobile.abrir-menu ~ .overlay-menu{
-    display: block; /* Mostra a sobreposição ao abrir o menu */
-}
-
-.menu-mobile .btn-fechar{
-    padding: 20px 5%; /* Espaçamento interno do botão de fechar */
-}
-
-.menu-mobile .btn-fechar i{
-    color: rgb(0, 204, 255); /* Cor do ícone de fechar */
-    font-size: 30px; /* Tamanho do ícone de fechar */
-}
-
-
-/* Menu mobile */
-.menu-mobile nav ul{
-    text-align: right; /* Alinha o texto dos itens do menu à direita */
-}
-
-.menu-mobile nav ul li a{
-    color: black; /* Cor dos links do menu */
-    font-size: 20px; /* Tamanho da fonte dos links */
-    font-weight: 300; /* Peso da fonte mais leve */
-    padding: 20px 8%; /* Espaçamento interno dos links */
-    display: block; /* Torna os links blocos para melhor controle de layout */
-}
-
-.menu-mobile nav ul li a:hover{
-    background-color: rgb(0, 204, 255); /* Cor de fundo ao passar o mouse nos links */
-    color: #000; /* Muda a cor do texto para preto ao passar o mouse */
-}
-
-.overlay-menu{
-    background-color:rgba(0, 147, 184, 0.616) ; /* Cor de fundo da sobreposição do menu */
-    width: 100%; /* Ocupa toda a largura da tela */
-    height: 100%; /* Ocupa toda a altura da tela */
-    position: fixed; /* Fixa a sobreposição no topo da tela */
-    top: 0; /* Posiciona no topo */
-    left: 0; /* Posiciona à esquerda */
-    z-index: 88888; /* Prioridade sobre outros elementos, mas abaixo do menu */
-    display: none; /* Inicialmente oculta a sobreposição */
-}
 
 
 /* Cards dos Produtos*/
@@ -519,11 +451,45 @@ footer > section > p {
 /*
 **Config. Mobile**
 */
-@media (max-width: 1020px) {
-  .logo, .cart-button{
-    display:none;  
+/* Configurações para telas pequenas (max-width: 600px) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;  /* Reduzindo o tamanho geral da fonte para telas menores */
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 24px;  /* Ajuste no tamanho da logo */
+    }
+
+    .cart-button {
+        font-size: 14px; /* Ajuste no tamanho do botão do carrinho */
+      
+     
+     /* Configurações para telas pequenas (max-width: 600px) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;  /* Reduzindo o tamanho geral da fonte para telas menores */ 
+    }
+
+    header {
+        flex-direction: column;
+        text-align:  center center;
+    }
+
+    .logo {
+        font-size: 24px;  /* Ajuste no tamanho da logo */
+    }
+
+    .cart-button {
+        font-size: 14px; /* Ajuste no tamanho do botão do carrinho */
+
   }
-  
+
   
     }
 
