@@ -1,10 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/*
-**testando ainda
-*\
-
-
 /*
 ** Configurações globais**
 */
@@ -23,7 +17,8 @@ body{
     min-height: 100vh;
     margin: 0;
     font-family: 'Arial', sans-serif;
-    background: #e4d0ed;
+    background: #d2b5d2;
+    color: #FFFFFF;
 }
 /*
 ** Config. Cabeçalho**
@@ -66,12 +61,11 @@ nav ul li a {
     text-decoration: none;
     font-size: 18px;
     color: #FFF;
-    transition: all 0.3s;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
-    color: #e41776;
-    transform: scale(1.1);
+    color: #e417e4;
 }
 
 .social-icons {
@@ -123,15 +117,15 @@ nav ul li a:hover {
 section {
     padding: 20px;
     text-align: center;
-    color: #5A5A5A;
 }
 
 #home {
-    height: 100vh;
-}
-
-#sobre {
-    height: 100vh;
+    height: 400px;
+    width: 460px;
+    background-image: url(imagens/confeitaria-interior.jpg); /* background da section home*/ 
+    background-repeat: no-repeat; /*garante background não vai ficar repetindo*/
+    background-size: cover; /* usamos para a foto caber no espaço reservado para ela*/
+    opacity: 0.6; /* traz um fundo transparente*/
 }
 #contato {
     height: 100vh;
@@ -143,10 +137,10 @@ h1, h2 {
 }
 
 p {
+    font-family: 'Poppins', sans-serif;
     font-size: 20px;
+    text-align: center;
 }
-
-
 
 /* Cards dos Produtos*/
 .product-container {
@@ -159,7 +153,6 @@ p {
 }
 
 .product-title{
-    color: #000000;
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
     font-weight: 400;
@@ -170,7 +163,7 @@ p {
 .card {
     width: 280px;
     height: 350px;
-    background: #aa92ed;
+    background: #aa92ee;
     border-radius: 20px;
     align-content: center;
     box-shadow: 0 2px rgba(48, 0, 70, 0.553);
@@ -178,7 +171,7 @@ p {
 }
 
 .card:hover{
-    transform: scale(1.05);
+    transform: scale(1.05); /* O card aumenta seu tamanho quando se passa o mouse por cima**/
 }
 
 .caixaImage img {
@@ -190,7 +183,6 @@ p {
 }
 
 .conteudo h2 {
-    color: #000000;
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
     font-style: italic;
@@ -199,12 +191,10 @@ p {
 }
 
 .conteudo p {
-    color: #000000;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-style: italic;
     margin-bottom: 10px;
-    color: #353131;
 }
 
 .conteudo a {
@@ -248,12 +238,18 @@ p {
 #menu p{
     font-size: 20px;
 }
+
+/* background da section home*/
+#home {
+    height: 400px;
+    width: 768px;
+}
     
 }
 
-/*Config. Tablet*/
+/*Config. Desktop*/
 @media(min-width: 1024px){
-    /*Config. Tablet | Cards dos Produtos*/
+    /*Cards dos Produtos*/
     .product-title{
         font-size: 36px;
     }
@@ -261,6 +257,12 @@ p {
     .conteudo h2{
         font-size: 24px;
     }
+
+    /* background da section home*/
+#home {
+    height: 700px;
+    width: 1260px;
+}
 
 }
 
@@ -279,7 +281,6 @@ p {
 }
 
 .item h2 {
-    color: #000000;
     font-size: 24px;
     font-style: italic;
     font-weight: 400;
@@ -287,18 +288,21 @@ p {
 }
 
 .item p {
-    color: #000000;
     font-size: 18px;
     font-style: italic;
     margin-bottom: 10px;
-    color: #353131;
 }
 
 #menu img{
     width: 340px;
     height: 200px;
-    border-radius: 10px;
+    border-radius: 20px;
     object-fit: cover;
+    transition: 0.4s;
+}
+#menu img:hover{
+    transform: scale(1.05);
+    transition: 0.4s;
 }
 #menu p{
     font-size: 18px;
@@ -447,12 +451,8 @@ footer > section > p {
 }
 
 
-
-/*
-**Config. Mobile**
-*/
 /* Configurações para telas pequenas (max-width: 600px) */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     body {
         font-size: 14px;  /* Reduzindo o tamanho geral da fonte para telas menores */
     }
@@ -468,40 +468,60 @@ footer > section > p {
 
     .cart-button {
         font-size: 14px; /* Ajuste no tamanho do botão do carrinho */
-      
-     
-     /* Configurações para telas pequenas (max-width: 600px) */
-@media (max-width: 600px) {
-    body {
-        font-size: 14px;  /* Reduzindo o tamanho geral da fonte para telas menores */ 
     }
 
-    header {
+    nav ul {
         flex-direction: column;
-        text-align:  center center;
     }
 
-    .logo {
-        font-size: 24px;  /* Ajuste no tamanho da logo */
+    .product-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .cart-button {
-        font-size: 14px; /* Ajuste no tamanho do botão do carrinho */
-
-  }
-
-  
+    .product-title {
+        font-size: 20px; /* Ajuste no tamanho do título */
     }
+
+
+
+    .conteudo h2, .conteudo p {
+        font-size: 16px; /* Ajuste no tamanho do texto dos cards */
+    }
+
+ 
+    footer > section > article > nav > ul > a {
+        font-size: 14px;
+    }
+
+    .voltarAoTopo {
+        bottom: 50px; /* Ajuste na posição do botão de voltar ao topo */
+    }
+}
+
+/* Configurações para telas médias (max-width: 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding: 10px;
+    }
+
+    .product-container {
+        gap: 30px;
+    }
+
+   
+}
 
 /**Config. Botão Voltar Ao Topo**/    
 .voltarAoTopo{
     position: fixed;
+    z-index: 1;
     bottom: 90px;
-    right: 20px;
+    right: 10px;
     padding: 10px 15px;
     background: radial-gradient(#5f069e, #1f11b0);
     color: #FFFFFF;
-    border-radius: 30px;
+    border-radius: 40px;
     cursor: pointer;
     transition: 0.4s;
 }
