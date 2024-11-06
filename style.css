@@ -134,6 +134,7 @@ section {
 h1, h2 {
     font-size: 36px;
     margin-bottom: 10px;
+     text-align: center;
 }
 
 p {
