@@ -118,14 +118,17 @@ section {
     padding: 20px;
     text-align: center;
 }
-
+#sobre{
+    height: 500px;
+    margin-top: 40px;
+}
 #home {
     height: 400px;
-    width: 460px;
+    width: 100%;
     background-image: url(imagens/confeitaria-interior.jpg); /* background da section home*/ 
     background-repeat: no-repeat; /*garante background não vai ficar repetindo*/
     background-size: cover; /* usamos para a foto caber no espaço reservado para ela*/
-    opacity: 0.6; /* traz um fundo transparente*/
+    opacity: 0.5; /* traz um fundo transparente*/
 }
 #contato {
     height: 100vh;
@@ -134,7 +137,6 @@ section {
 h1, h2 {
     font-size: 36px;
     margin-bottom: 10px;
-     text-align: center;
 }
 
 p {
@@ -243,9 +245,9 @@ p {
 /* background da section home*/
 #home {
     height: 400px;
-    width: 768px;
+    width: 100%;
 }
-    
+
 }
 
 /*Config. Desktop*/
@@ -261,8 +263,8 @@ p {
 
     /* background da section home*/
 #home {
-    height: 700px;
-    width: 1260px;
+    height: 500px;
+    width: 100%;
 }
 
 }
@@ -438,7 +440,7 @@ footer > section > p {
         font-size: 2vw;
     }
     .cadastro1 input[type="submit"] {
-    
+
     font-size: 1.5vh;
     }
     footer > section > p {
@@ -456,27 +458,10 @@ footer > section > p {
 /*
 **Config. Mobile**
 */
-@media (max-width: 720px) {
+@media (max-width: 600px) {
     .cart-button {
         display: none;
     }
-  
-  .logo{
-    padding: 14px;
-  }
-  
-  nav ul{
-    flex-direction: flex; 
-    letter-spacing: 2px;
-
-  }
-  
-  header {
-   flex-direction: column;        
-   padding: 18px;
-  }
-  
-  
     }
 
 /**Config. Botão Voltar Ao Topo**/    
@@ -488,7 +473,7 @@ footer > section > p {
     padding: 10px 15px;
     background: radial-gradient(#5f069e, #1f11b0);
     color: #FFFFFF;
-    border-radius: 40px;
+    border-radius: 60px;
     cursor: pointer;
     transition: 0.4s;
 }
