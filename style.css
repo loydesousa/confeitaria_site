@@ -462,6 +462,23 @@ footer > section > p {
     .cart-button {
         display: none;
     }
+
+  .logo{
+    padding: 14px;
+  }
+
+  nav ul{
+    flex-direction: flex; 
+    letter-spacing: 2px;
+
+  }
+
+  header {
+   flex-direction: column;        
+   padding: 18px;
+  }
+
+
     }
 
 /**Config. Botão Voltar Ao Topo**/    
