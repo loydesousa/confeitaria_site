@@ -118,14 +118,17 @@ section {
     padding: 20px;
     text-align: center;
 }
-
+#sobre{
+    height: 500px;
+    margin-top: 40px;
+}
 #home {
     height: 400px;
-    width: 460px;
+    width: 100%;
     background-image: url(imagens/confeitaria-interior.jpg); /* background da section home*/ 
     background-repeat: no-repeat; /*garante background não vai ficar repetindo*/
     background-size: cover; /* usamos para a foto caber no espaço reservado para ela*/
-    opacity: 0.6; /* traz um fundo transparente*/
+    opacity: 0.5; /* traz um fundo transparente*/
 }
 #contato {
     height: 100vh;
@@ -242,7 +245,7 @@ p {
 /* background da section home*/
 #home {
     height: 400px;
-    width: 768px;
+    width: 100%;
 }
     
 }
@@ -260,8 +263,8 @@ p {
 
     /* background da section home*/
 #home {
-    height: 700px;
-    width: 1260px;
+    height: 500px;
+    width: 100%;
 }
 
 }
@@ -470,7 +473,7 @@ footer > section > p {
     padding: 10px 15px;
     background: radial-gradient(#5f069e, #1f11b0);
     color: #FFFFFF;
-    border-radius: 40px;
+    border-radius: 60px;
     cursor: pointer;
     transition: 0.4s;
 }
